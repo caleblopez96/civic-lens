@@ -44,7 +44,8 @@ body.dark-mode {
   cursor: pointer;
 }
 
-body.light-mode header {
+body.light-mode header,
+body.light-mode footer {
   color: var(--watchdog-white);
 }
 
@@ -64,12 +65,26 @@ body.light-mode header {
 }
 
 /* ///ADD/// Navigation Styles */
-header {
+header,
+footer {
   background-color: var(--blue-bulletin);
   padding: 1rem;
 }
 
 /* ///ADD/// Global Layout Styles */
+body {
+  height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+main {
+  padding: 1rem;
+}
+
+ul {
+  list-style: none;
+}
 
 /* ///ADD/// Global Text Styles */
 
