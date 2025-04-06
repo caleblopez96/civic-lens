@@ -109,6 +109,7 @@
           </article>
         </div>
       </section>
+
       <section id="articles">
         <h2>Featured Articles</h2>
         <div class="articles-grid-container">
@@ -182,17 +183,85 @@
           </article>
         </div>
       </section>
-      <h2>Stay Informed. Stay Empowered.</h2>
-      Receive text messages with the news you want to know.
-      <!-- these are supposed to be inputs -->
-      Name Mobile Notification Preferences
-      <!-- these are supposed to be checkboxes -->
-      Breaking News Politics Weather Sports Entertainment World Financial
-      Subscribe
+
+      <section>
+        <h2>Stay Informed. Stay Empowered.</h2>
+        <p>Receive text messages with the news you want to know.</p>
+        <form action="">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone" />
+          </div>
+
+          <fieldset>
+            <legend>Notification Preferences</legend>
+
+            <div class="checkbox-group">
+              <input type="checkbox" name="preference" id="break-news-check" />
+              <label for="break-news-check">Breaking News</label>
+            </div>
+
+            <div class="checkbox-group">
+              <input type="checkbox" name="preference" id="sports-news-check" />
+              <label for="sports-news-check">Sports</label>
+            </div>
+
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                name="preference"
+                id="financial-news-check"
+              />
+              <label for="financial-news-check">Financial</label>
+            </div>
+
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                name="preference"
+                id="politics-news-check"
+              />
+              <label for="politics-news-check">Politics</label>
+            </div>
+
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                name="preference"
+                id="entertainment-news-check"
+              />
+              <label for="entertainment-news-check">Entertainment</label>
+            </div>
+
+            <div class="checkbox-group">
+              <input
+                type="checkbox"
+                name="preference"
+                id="weather-news-check"
+              />
+              <label for="weather-news-check">Weather</label>
+            </div>
+          </fieldset>
+          <!-- these are supposed to be checkboxes -->
+          <input type="button" value="Subscribe" />
+        </form>
+      </section>
     </main>
-    <h2>Follow Us</h2>
-    Twitter/X Instagram YouTube TikTok LinkedIn &copy; 2025 Civic Lens. All
-    rights reserved.
+    <footer>
+      <h2>Follow Us</h2>
+      <ul>
+        <li>Twitter/X</li>
+        <li>Instagram</li>
+        <li>Youtube</li>
+        <li>TikTok</li>
+        <li>LinkedIn</li>
+      </ul>
+      <p>&copy; 2025 Civic Lens. All rights reserved.</p>
+    </footer>
 
     <script>
       const toggleButton = document.getElementById("theme-toggle");
