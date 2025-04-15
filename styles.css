@@ -75,6 +75,10 @@ body.light-mode footer {
   position: relative;
 }
 
+nav h2 {
+  display: none;
+}
+
 /* menu btn */
 .menu-button {
   display: inline-block;
@@ -141,10 +145,16 @@ main {
   padding: 1rem;
 }
 
+.header-content,
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 header,
 footer {
   background-color: var(--blue-bulletin);
-  padding: 1rem;
 }
 
 h1,
@@ -152,7 +162,7 @@ h2,
 h3 {
   font-family: var(--font-heading);
   font-weight: normal;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
 main {
@@ -171,6 +181,12 @@ article {
   padding: 1rem;
   color: white;
   margin: 0 0.25rem;
+  transition: transform 0.3s ease;
+}
+
+article:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 video {
@@ -195,7 +211,6 @@ video {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 0 0.5rem;
 }
 
 .news-container article {
@@ -324,11 +339,17 @@ footer li {
   width: fit-content;
 }
 
+footer li:hover {
+  background-color: var(--blue-bulletin);
+  border: 1px solid var(--news-flash);
+  cursor: pointer;
+}
+
 small {
   display: block;
   text-align: center;
   width: 100%;
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
 
 /* ///ADD/// medium styles 620px */
@@ -395,9 +416,22 @@ small {
     flex-direction: column;
     flex-wrap: wrap;
   }
+  footer ul {
+    justify-content: initial;
+    gap: 1.5rem;
+  }
 }
 
 /* ///ADD/// large styles 920px */
+@media screen and (min-width: 920px) {
+  .articles-grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  fieldset {
+    max-height: 200px;
+  }
+}
 
 /* ///ADD/// x-large styles 1024px */
 
