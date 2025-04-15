@@ -372,7 +372,7 @@ small {
     margin: 1rem 0;
   }
 
-  /* Hide the hamburger menu button */
+  /* hide the menu button */
   .menu-button,
   #menu-toggle {
     display: none;
@@ -433,10 +433,51 @@ small {
   }
 }
 
+/* I didnt really see a use for this media query based off the video in the google drive..? */
 /* ///ADD/// x-large styles 1024px */
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
+@media (prefers-color-scheme: light) {
+  body:not(.dark-mode):not(.light-mode) {
+    background-color: var(--watchdog-white);
+    color: var(--truth-text);
+  }
 
-/* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
-@supports (selector(:has(*))) {
+  body:not(.dark-mode):not(.light-mode) header,
+  body:not(.dark-mode):not(.light-mode) footer {
+    color: var(--watchdog-white);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  article:hover {
+    transform: none;
+  }
+
+  .skip-link {
+    transition: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not(.dark-mode):not(.light-mode) {
+    background-color: var(--truth-text);
+    color: var(--watchdog-white);
+  }
+}
+
+@supports selector(:has(*)) {
+  .mobile-nav:has(#menu-toggle:checked) .menu-button {
+    background-color: var(--blue-bulletin);
+    border: 2px solid var(--news-flash);
+  }
+
+  .mobile-nav:has(#menu-toggle:checked) .menu {
+    max-height: 300px;
+    box-shadow: var(--shadow);
+  }
+
+  #menu-toggle:checked + .menu-button + .menu {
+    max-height: initial;
+  }
 }
