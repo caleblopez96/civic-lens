@@ -239,6 +239,14 @@ video {
   box-shadow: var(--shadow-md);
 }
 
+body.dark-mode .articles-grid-container article {
+  color: var(--watchdog-white);
+}
+
+body.dark-mode .articles-grid-container article h3 {
+  border-bottom: 2px solid var(--story-subtitle);
+}
+
 .articles-grid-container article h3 {
   border-bottom: 2px solid var(--story-subtitle);
 }
